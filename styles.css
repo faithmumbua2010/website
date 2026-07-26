@@ -293,6 +293,8 @@ header .navbar {
 
 .testimonials-section .testimonial{
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .testimonials-section .testimonial .user-image{
