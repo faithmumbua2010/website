@@ -1,3 +1,4 @@
+const navLinks= document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton= document.getElementById("menu-open-button");
 const menuCloseButton= document.getElementById("menu-close-button");
 
@@ -13,9 +14,15 @@ menuCloseButton.addEventListener("click",()=> {
     document.body.classList.remove("show-mobile-menu")
 });
 
+// Close menu when the nav link is clicked
+navLinks.forEach(link =>{
+  link.addEventListener("click", () =>menuCloseButton.click());
+});
+
 //Initialize Swiper
 const swiper = new Swiper('.slider-wrapper', {
   loop: true,
+  grabCursor:true,
   spaceBetween:25,
 
   // If we need pagination
